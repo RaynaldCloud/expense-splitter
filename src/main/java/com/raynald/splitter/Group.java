@@ -36,6 +36,13 @@ public class Group {
         expenses.add(expense);
     }
 
+    public void removeExpense(int index) {
+        if (index < 0 || index >= expenses.size()) {
+            throw new IllegalArgumentException("That expense no longer exists");
+        }
+        expenses.remove(index);
+    }
+
     /**
      * Each person's balance in cents.
      * Positive: others owe them money. Negative: they owe money. Always adds up to zero.
