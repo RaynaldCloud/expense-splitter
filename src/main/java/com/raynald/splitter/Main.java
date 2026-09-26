@@ -24,5 +24,8 @@ public class Main {
                           : "is settled";
             System.out.println("  " + person + " " + status);
         });
+        System.out.println("Settle up:");
+        SettlementCalculator.settle(group.balances())
+                .forEach(payment -> System.out.println("  " + payment));
     }
 }
